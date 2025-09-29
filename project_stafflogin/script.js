@@ -14,7 +14,7 @@ function loginPageRequirement() {
 
         alert("Login successful!");
         // Redirect to staff dashboard (you can create dashboard.html)
-        window.location.href = "dashboard.html";
+        window.location.href = "../Staff_Dashboard/staff_dashboard.html";
     } else {
         alert("Invalid credentials, try again!");
     }

@@ -1,4 +1,4 @@
-// Script (placed after the DOM elements)
+
 const addButtons = document.getElementsByClassName('btn');
 const cartList = document.getElementById('cart');
 const totalDisplay = document.getElementById('total');
