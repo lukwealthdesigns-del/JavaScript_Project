@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Dashboard</title>
+  <style>
+    /* ===== Global Styles ===== */
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    /* ===== Sidebar ===== */
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    .menu a {
+      display: block;
+      padding: 12px 15px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
+    .menu a:hover {
+      background: #1abc9c;
+    }
+    .logout {
+      text-align: center;
+      margin-top: auto;
+    }
+    .logout button {
+      padding: 10px 20px;
+      background: #e74c3c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .logout button:hover {
+      background: #c0392b;
+    }
+    /* ===== Main Content ===== */
+    .main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 24px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <h2>Staff Panel</h2>
+      <div class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Manage Students</a>
+        <a href="#">Manage Courses</a>
+        <a href="#">Attendance</a>
+        <a href="#">Reports</a>
+      </div>
+    </div>
+    <div class="logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <!-- Main Content -->
+  <div class="main">
+    <div class="header">
+      <h1>Welcome, Staff</h1>
+      <p id="date"></p>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p>245</p>
+      </div>
+      <div class="card">
+        <h3>Courses Assigned</h3>
+        <p>12</p>
+      </div>
+      <div class="card">
+        <h3>Attendance Today</h3>
+        <p>87%</p>
+      </div>
+      <div class="card">
+        <h3>Pending Reports</h3>
+        <p>5</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Show current date
+    document.getElementById("date").innerText = new Date().toDateString();
+    // Logout function
+    function logout() {
+      alert("Logging out...");
+      // Redirect logic here
+    }
+  </script>
+</body>
+</html>

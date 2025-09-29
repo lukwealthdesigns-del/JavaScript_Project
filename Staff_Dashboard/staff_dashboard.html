@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Staff Dashboard</title>
+  <link rel="stylesheet" href="newstyle.css">
+  
+</head>
+<body>
+  
+  <!-- === Sidebar === -->
+  <div class="sidebar">
+    
+    <div class="menus">
+      <h2>DASHBOARD</h2>
+      <div class="menu">
+        <a href="#">Dashboard</a>
+        <a href="">Manage Foods</a>
+        <a href="">Categories</a>
+        <a href="">Orders</a>
+        <a href="">Customers</a>
+      </div>
+    </div>
+    <div class="logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  
+  
+  <!-- === Main Content === -->
+  <div class="main">
+    <div class="header">
+      <h1>Welcome, Staff</h1>
+      <p id="date"></p>
+    </div>
+
+    <!-- == Stats Cards == -->
+    <div class="card-container">
+      <div class="card">
+        <h3>Total Foods</h3>
+        <p>120</p>
+      </div>
+      <div class="card">
+        <h3>Categories</h3>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h3>Pending Orders</h3>
+        <p>35</p>
+      </div>
+      <div class="card">
+        <h3>Revenue Today</h3>
+        <p>₦540,000</p>
+      </div>
+    </div>
+    
+    <!-- == Recent Orders Table == -->
+    <h2 style="margin-bottom:10px;">Recent Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Food Item</th>
+          <th>Quantity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Lukman</td>
+          <td>Latte</td>
+          <td>2</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Mariam</td>
+          <td>Chicken Sandwitch</td>
+          <td>1</td>
+          <td>Delivered</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Samuel</td>
+          <td>Chicken and Chips</td>
+          <td>3</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Olamide</td>
+          <td>Sausage Roll</td>
+          <td>3</td>
+          <td>In Progress</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
+
