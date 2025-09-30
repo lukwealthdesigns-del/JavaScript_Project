@@ -14,7 +14,7 @@ function loginPageRequirement() {
         localStorage.setItem(userName, "admin");
 
         alert("Login successful!");
-        // Redirect to staff dashboard (you can create dashboard.html)
+        // Redirect to staff dashboard 
         window.location.href = "../Staff_Dashboard/staff_dashboard.html";
     } else {
         alert("Invalid credentials, try again!");
