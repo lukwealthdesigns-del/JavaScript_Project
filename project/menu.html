@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>☕ FreshBite Cafe - Menu</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -20,7 +20,7 @@
         <h3  class="h3">Latte</h3>
         <p class="describe">Creamy espresso with milk</p>
         <span class="price">₦2500</span>
-        <button class="btn">Add to Order</button>
+        <button class="btn" onclick="addToCart('Latte', 2500)">Add to Order</button>
       </div>
 
       <div class="menu">
@@ -28,7 +28,7 @@
         <h3  class="h3">Chicken Sandwich</h3>
         <p class="describe">Grilled chicken with fresh veggies</p>
         <span class="price">₦3500</span>
-        <button class="btn">Add to Order</button>
+        <button class="btn" onclick="addToCart('Chicken Sandwich', 3500)">Add to Order</button>
       </div>
 
       <div class="menu">
@@ -36,14 +36,14 @@
         <h3 class="h3">Chocolate Cake</h3>
         <p class="describe">Rich and moist chocolate delight</p>
         <span class="price">₦2000</span>
-        <button class="btn">Add to Order</button>
+        <button class="btn" onclick="addToCart('Chocolate Cake', 2000)">Add to Order</button>
       </div>
         <div class="menu">
         <img src="./images/fd7d20e90dfc69035a149db47c0f53e0.jpg" alt="Amala" class="menuimg">
         <h3  class="h3">Amala</h3>
         <p class="describe">Amala with sauce</p>
         <span class="price">₦2500</span>
-        <button class="btn">Add to Order</button>
+        <button class="btn"onclick="addToCart('Amala', 2500)" >Add to Order</button>
       </div>
 
       <div class="menu">
@@ -51,7 +51,7 @@
         <h3  class="h3">Small Chops</h3>
         <p class="describe">Small Chops with chicken</p>
         <span class="price">₦3500</span>
-        <button class="btn">Add to Order</button>
+        <button class="btn" onclick="addToCart('Small Chops', 3500)">Add to Order</button>
       </div>
     </div>
    

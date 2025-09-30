@@ -4,4 +4,5 @@ document.getElementById("date").innerText = new Date().toDateString();
 function logout() {
     alert("Logging out...");
     // Redirect logic goes here
+     window.location.href = "../project_stafflogin/login.html"
 }

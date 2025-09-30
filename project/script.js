@@ -1,63 +1,31 @@
+let cart = [];
+let total = 0;
 
-const addButtons = document.getElementsByClassName('btn');
-const cartList = document.getElementById('cart');
-const totalDisplay = document.getElementById('total');
-
-const cart = [];
+function addToCart(itemName, itemPrice) {
+    cart.push({
+        name: itemName,
+        price: itemPrice
+    });
+   
+    total += itemPrice;
+   
+    updateCart();
+}
 
 function updateCart() {
-  // Clear existing list items
-  while (cartList.firstChild) {
-    cartList.removeChild(cartList.firstChild);
-  }
-
-  let total = 0;
-
-  for (let i = 0; i < cart.length; i++) {
-    const item = cart[i];
-
-    const li = document.createElement('li');
-
-    const spanName = document.createElement('span');
-    spanName.className = 'cart-item-name';
-    // Display name by putting it in a data-attribute (for machine access)
-    spanName.setAttribute('data-name-display', item.name);
-
-    const spanPrice = document.createElement('span');
-    spanPrice.className = 'cart-item-price';
-    spanPrice.setAttribute('data-price-display', item.price.toFixed(2));
-
-    li.appendChild(spanName);
-    li.appendChild(spanPrice);
-    cartList.appendChild(li);
-
-    total += item.price;
-  }
-
-  totalDisplay.setAttribute('data-total-display', total.toFixed(2));
+    const cartList = document.getElementById('cart');
+    const totalElement = document.getElementById('total');
+   
+    cartList.innerHTML = '';
+   
+    cart.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ₦${item.price.toLocaleString()}`;
+        cartList.appendChild(li);
+    });
+   
+    totalElement.textContent = `Total: ₦${total.toLocaleString()}`;
 }
 
-for (let i = 0; i < addButtons.length; i++) {
-  const btn = addButtons[i];
-  btn.addEventListener('click', function () {
-    // walk up DOM to find parent with class "menu"
-    let menuDiv = btn;
-    while (menuDiv && menuDiv.className !== 'menu') {
-      menuDiv = menuDiv.parentNode;
-    }
-    if (!menuDiv) {
-      return;
-    }
 
-    const name = menuDiv.getAttribute('data-name');
-    const priceAttr = menuDiv.getAttribute('data-price');
-    const price = parseFloat(priceAttr);
 
-    const item = {
-      name,
-      price
-    };
-    cart.push(item);
-    
-  });
-}
