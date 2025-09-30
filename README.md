@@ -24,6 +24,7 @@
     →Edit menu item prices
     →View all current menu items
 
+
 ### 🧑‍🍽️ Customer Side
  Digital Menu:
     →Items displayed as cards/boxes
@@ -54,7 +55,9 @@
 * `staff-dashboard.html` – Staff menu management
 * `customer-menu.html` – Customer-facing menu
 
----
+![Staff login picture](https://github.com/user-attachments/assets/895d1c9e-338e-4af1-b84c-3c67ecd61f83)
+![Dashboard](https://github.com/user-attachments/assets/ee218e14-1fbb-4d6a-93bd-680821427d0f)
+![Cafe menu](https://github.com/user-attachments/assets/1fa688fa-a0fa-4e0a-9b85-d88edd3337b7)
 
 ## 📝 Sample Data Structure
 
