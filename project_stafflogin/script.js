@@ -10,7 +10,8 @@ function loginPageRequirement() {
 
         // Save login info in localStorage
         localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("loggedUser", userName);
+        localStorage.setItem(password ,"cafe123")
+        localStorage.setItem(userName, "admin");
 
         alert("Login successful!");
         // Redirect to staff dashboard (you can create dashboard.html)
