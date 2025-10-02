@@ -1,0 +1,298 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+min-height: 100vh;
+padding: 20px;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+background: white;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+}
+
+.header {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 30px;
+text-align: center;
+}
+
+.header h1 {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+
+.header p {
+font-size: 1.1em;
+opacity: 0.9;
+}
+
+.content {
+padding: 30px;
+}
+
+.nav-buttons {
+display: flex;
+gap: 10px;
+justify-content: center;
+margin-bottom: 30px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 12px 25px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+font-weight: 600;
+transition: all 0.3s ease;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+}
+
+.btn-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+background: #6c757d;
+color: white;
+}
+
+.btn-secondary:hover {
+background: #5a6268;
+transform: translateY(-2px);
+}
+
+.btn-danger {
+background: #dc3545;
+color: white;
+padding: 8px 15px;
+font-size: 14px;
+}
+
+.btn-danger:hover {
+background: #c82333;
+}
+
+.btn-success {
+background: #28a745;
+color: white;
+padding: 8px 15px;
+font-size: 14px;
+}
+
+.btn-success:hover {
+background: #218838;
+}
+
+.login-form {
+max-width: 400px;
+margin: 0 auto;
+padding: 40px;
+background: #f8f9fa;
+border-radius: 10px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+color: #333;
+}
+
+.form-group input,
+.form-group select {
+width: 100%;
+padding: 12px;
+border: 2px solid #e0e0e0;
+border-radius: 8px;
+font-size: 16px;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+outline: none;
+border-color: #667eea;
+}
+
+.search-box {
+margin-bottom: 30px;
+}
+
+.search-box input {
+width: 100%;
+padding: 15px;
+border: 2px solid #e0e0e0;
+border-radius: 10px;
+font-size: 16px;
+}
+
+.search-box input:focus {
+outline: none;
+border-color: #667eea;
+}
+
+.books-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+
+.book-card {
+background: white;
+border: 2px solid #e0e0e0;
+border-radius: 10px;
+padding: 20px;
+transition: all 0.3s ease;
+}
+
+.book-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card.available {
+border-left: 5px solid #28a745;
+background: #f8fff9;
+}
+
+.book-card.checked-out {
+border-left: 5px solid #dc3545;
+background: #fff8f8;
+}
+
+.book-card h3 {
+color: #333;
+margin-bottom: 10px;
+font-size: 1.3em;
+}
+
+.book-card p {
+color: #666;
+margin-bottom: 8px;
+}
+
+.book-status {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 20px;
+font-size: 14px;
+font-weight: 600;
+margin-top: 10px;
+}
+
+.status-available {
+background: #28a745;
+color: white;
+}
+
+.status-checked-out {
+background: #5435dc;
+color: white;
+}
+
+.book-actions {
+margin-top: 15px;
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.alert {
+padding: 15px;
+border-radius: 8px;
+margin-bottom: 20px;
+font-weight: 500;
+}
+
+.alert-success {
+background: #d4edda;
+color: #155724;
+border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+background: #f8d7da;
+color: #721c24;
+border: 1px solid #f5c6cb;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+margin-bottom: 30px;
+}
+
+.stat-card {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 25px;
+border-radius: 10px;
+text-align: center;
+}
+
+.stat-card h3 {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+
+.stat-card p {
+font-size: 1.1em;
+opacity: 0.9;
+}
+
+.empty-state {
+text-align: center;
+padding: 60px 20px;
+color: #999;
+}
+
+.empty-state h3 {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+.header h1 {
+font-size: 1.8em;
+}
+
+.books-grid {
+    grid-template-columns: 1fr;
+}
+
+.nav-buttons {
+    flex-direction: column;
+}
+
+.btn {
+    width: 100%;
+}
+
+
+}

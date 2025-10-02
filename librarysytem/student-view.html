@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student View - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Library Management System</h1>
+            <p>Student Library View</p>
+        </div>
+
+    <div class="content">
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-secondary">Librarian Login</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="studentSearch" placeholder="🔍 Search books by title or author..." oninput="searchBooks('student')">
+        </div>
+
+        <div id="studentBooks" class="books-grid" ></div>
+    </div>
+</div>
